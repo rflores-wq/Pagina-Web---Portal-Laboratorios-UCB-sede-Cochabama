@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════════════════════════
+   noticias.css  →  Estilos SOLO para las páginas de noticias.
+   Se carga después de style.css en noticias.html y noticia.html.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* La tarjeta ahora es un enlace: que no se subraye y que resalte al pasar */
+a.news-card { text-decoration: none; color: inherit; display: block; }
+a.news-card:hover .news-body h4 { color: var(--ucb-blue2); }
+
+/* ---- Página de UNA noticia (noticia.html) ---- */
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 90px;
+}
+.article .volver {
+  display: inline-block;
+  color: var(--ucb-blue2);
+  font-weight: 600;
+  font-size: .9rem;
+  margin: 6px 0 22px;
+}
+.article .volver:hover { color: var(--ucb-gold); }
+.article h1 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--gray-dark);
+  line-height: 1.2;
+  margin: 8px 0 10px;
+}
+.article .article-meta {
+  color: var(--gray-mid);
+  font-size: .85rem;
+  margin-bottom: 26px;
+}
+.article .article-img {
+  height: 360px;
+  border-radius: 14px;
+  margin-bottom: 34px;
+  box-shadow: var(--shadow);
+  background: var(--ucb-light);
+}
+.article-body p {
+  color: var(--gray-dark);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
