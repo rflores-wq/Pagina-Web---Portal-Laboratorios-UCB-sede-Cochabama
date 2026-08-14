@@ -29,7 +29,7 @@
     <li><a href="laboratorios.html">Laboratorios</a></li>
     <li><a href="index.html#alcances">Alcances</a></li>
     <li><a href="index.html#investigacion">Investigación</a></li>
-    <li><a href="index.html#noticias">Noticias</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
     <li><a href="index.html#contacto">Contacto</a></li>
     <li><a href="login.html" class="btn-login">🔒 Portal Investigadores</a></li>
   </ul>
@@ -247,34 +247,11 @@
     </p>
   </div>
 
-  <div class="news-grid">
-    <div class="news-card fade-in">
-      <div class="news-thumb" style="background-image:url('noticia1.jpg.jpeg');"></div>
-      <div class="news-body">
-        <div class="news-cat">Nuevo Equipamiento</div>
-        <h4>Liofilizador BIOBASE potencia la investigación en biotecnología</h4>
-        <p>El laboratorio de Biotecnología incorpora tecnología de liofilización para proyectos de conservación de bioproductos.</p>
-        <div class="news-date">Julio 2026</div>
-      </div>
-    </div>
-    <div class="news-card fade-in">
-      <div class="news-thumb" style="background-image:url('noticia2.jpg.jpeg');"></div>
-      <div class="news-body">
-        <div class="news-cat">Investigación</div>
-        <h4>Cromatografía HPLC: nuevos análisis de calidad para la industria alimentaria</h4>
-        <p>Resultados del análisis de pigmentos naturales en productos locales, publicados en revista indexada.</p>
-        <div class="news-date">Junio 2026</div>
-      </div>
-    </div>
-    <div class="news-card fade-in">
-      <div class="news-thumb" style="background-image:url('noticia3.jpg.jpeg');"></div>
-      <div class="news-body">
-        <div class="news-cat">Premiación</div>
-        <h4>Estudiantes UCB ganan concurso nacional de prototipado e innovación</h4>
-        <p>El equipo del laboratorio de Diseño 3D representó a Bolivia en la feria internacional de inventores.</p>
-        <div class="news-date">Mayo 2026</div>
-      </div>
-    </div>
+  <!-- 👇 noticias.js llena esto solo con las 3 noticias más recientes -->
+  <div class="news-grid" id="ultimas-noticias"></div>
+
+  <div class="text-center" style="margin-top:40px;">
+    <a href="noticias.html" class="btn-primary" style="display:inline-block;">Ver todas las noticias →</a>
   </div>
 </section>
 
@@ -329,6 +306,7 @@
 
 <!-- ✅ El JavaScript ahora vive en script.js (compartido por todas las páginas) -->
 <script src="script.js"></script>
+<script src="noticias.js"></script>
 
 </body>
 </html>
