@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════════════
+   laboratorios.css  →  Estilos de la página de UN laboratorio
+   (hero con pregunta, proyectos con estado, equipos y modal).
+   Se carga después de style.css.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ---- Hero del laboratorio ---- */
+.lab-hero {
+  margin-top: 70px;                 /* deja pasar la navbar fija */
+  min-height: 62vh;
+  display: flex; align-items: flex-end;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(13,27,62,.86), rgba(27,49,104,.72)),
+              center/cover no-repeat var(--ucb-blue);
+}
+.lab-hero .lab-hero-inner { position: relative; z-index: 2; padding: 60px 5% 54px; max-width: 900px; }
+.lab-hero .lab-tag {
+  display: inline-block; background: var(--ucb-gold); color: var(--ucb-blue);
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 5px 15px; border-radius: 50px; margin-bottom: 18px;
+}
+.lab-hero h1 {
+  color: #fff; font-weight: 900; line-height: 1.12;
+  font-size: clamp(1.8rem, 4.4vw, 3.1rem); margin-bottom: 14px;
+}
+.lab-hero h1 em { color: var(--ucb-gold); font-style: normal; }
+.lab-hero .lab-sub { color: rgba(255,255,255,.86); font-size: 1.05rem; max-width: 640px; line-height: 1.6; }
+
+/* ---- Bloque de intro + datos rápidos ---- */
+.lab-intro { max-width: 1000px; margin: 0 auto; padding: 64px 24px 20px; }
+.lab-intro .section-label { color: var(--ucb-blue2); }
+.lab-intro p { color: var(--gray-mid); font-size: 1.05rem; line-height: 1.85; max-width: 720px; }
+
+.lab-datos { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.lab-dato {
+  background: var(--gray-soft); border-radius: 10px; padding: 14px 20px;
+  min-width: 150px;
+}
+.lab-dato .n { font-size: 1.6rem; font-weight: 900; color: var(--ucb-blue2); line-height: 1; }
+.lab-dato .t { font-size: .8rem; color: var(--gray-mid); margin-top: 4px; }
+
+/* ---- Sección genérica dentro del lab ---- */
+.lab-sec { max-width: 1000px; margin: 0 auto; padding: 34px 24px; }
+.lab-sec > h2 { font-size: 1.5rem; color: var(--ucb-blue2); margin-bottom: 6px; }
+.lab-sec > .sub { color: var(--gray-mid); margin-bottom: 26px; }
+
+/* ---- Tarjetas de proyecto (con estado) ---- */
+.proy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); gap: 20px; }
+.proy-card {
+  background: #fff; border: 1px solid var(--linea, #e2e6f0); border-radius: 12px;
+  padding: 24px; box-shadow: var(--shadow);
+}
+.proy-card h3 { color: var(--gray-dark); font-size: 1.1rem; margin: 10px 0 8px; }
+.proy-card p { color: var(--gray-mid); font-size: .92rem; line-height: 1.6; }
+.estado {
+  display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 50px;
+}
+.estado.activo { background: #e6f6ec; color: #1b7a43; }
+.estado.plan   { background: #fdf2dc; color: #9a6b00; }
+.estado.done   { background: #e9edf6; color: #3a4a68; }
+
+/* ---- Tarjetas de equipo (abren modal) ---- */
+.equipo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 16px; }
+.equipo-card {
+  background: var(--gray-soft); border: 2px solid transparent; border-radius: 12px;
+  padding: 22px 18px; text-align: center; cursor: pointer;
+  transition: border-color .2s, transform .2s, box-shadow .2s, background .2s;
+}
+.equipo-card:hover {
+  border-color: var(--ucb-blue2); transform: translateY(-4px);
+  box-shadow: var(--shadow); background: #fff;
+}
+.equipo-card .ic { font-size: 2rem; margin-bottom: 10px; }
+.equipo-card .nom { font-weight: 700; font-size: .92rem; color: var(--gray-dark); }
+.equipo-card .ver { display: block; margin-top: 8px; font-size: .74rem; color: var(--ucb-blue2); font-weight: 600; }
+
+/* ---- Modal de equipo ---- */
+.modal {
+  position: fixed; inset: 0; z-index: 2000; display: none;
+  background: rgba(13,27,62,.6); backdrop-filter: blur(3px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal.abierto { display: flex; }
+.modal-box {
+  background: #fff; border-radius: 16px; max-width: 460px; width: 100%;
+  overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.35); animation: modalUp .2s ease;
+}
+@keyframes modalUp { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
+.modal-img { height: 200px; background: center/cover no-repeat var(--ucb-light); }
+.modal-cuerpo { padding: 24px 26px 28px; }
+.modal-cuerpo h3 { color: var(--ucb-blue2); font-size: 1.25rem; margin-bottom: 4px; }
+.modal-cuerpo .marca { color: var(--gray-mid); font-size: .85rem; margin-bottom: 14px; }
+.modal-cuerpo p { color: var(--gray-dark); font-size: .95rem; line-height: 1.7; }
+.modal-cerrar {
+  float: right; cursor: pointer; border: none; background: #eef1f8; color: var(--ucb-blue);
+  width: 34px; height: 34px; border-radius: 50%; font-size: 1.1rem; font-weight: 700; margin: 12px 12px 0 0;
+}
+.modal-cerrar:hover { background: var(--ucb-gold); }
