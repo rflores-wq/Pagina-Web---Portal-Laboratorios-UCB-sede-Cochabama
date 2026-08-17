@@ -8,28 +8,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .portal-zona { margin-top: 70px; background: var(--gray-soft); padding: 40px 16px 70px; }
+    .portal-zona { background: var(--gray-soft); padding: 34px 16px 70px; }
     .portal-embed {
-      width: 100%; max-width: 560px; margin: 0 auto; height: 620px;
+      width: 100%; max-width: 560px; margin: 0 auto; height: 640px;
       border: 0; display: block; border-radius: 16px;
       background: #fff; box-shadow: var(--shadow);
     }
+    .portal-fallback { text-align: center; margin-top: 18px; color: var(--gray-mid); font-size: .9rem; }
+    .portal-fallback a { color: var(--ucb-blue2); font-weight: 600; }
+    .portal-fallback a:hover { color: var(--ucb-gold); }
   </style>
 </head>
 <body>
 
 <div id="site-nav"></div>
 
-<div class="page-header" style="margin-top:70px;">
-  <div class="section-label">Acceso privado</div>
-  <h1>Portal Investigadores</h1>
-  <p>Ingresa con tu usuario y contraseña institucional para acceder a las herramientas de la Red.</p>
-</div>
+<div class="page">
 
-<section class="portal-zona">
-  <https://script.google.com/macros/s/AKfycbxQtNgH4JWtMi32vrLcbdPdqXR4PnA84ddxI5z-IEh9FfL_gFwh-c3XZUyu6cSi_IdIIw/exec>
-  <iframe class=https://script.google.com/macros/s/AKfycbxQtNgH4JWtMi32vrLcbdPdqXR4PnA84ddxI5z-IEh9FfL_gFwh-c3XZUyu6cSi_IdIIw/exec></iframe>
-</section>
+  <div class="page-header">
+    <div class="section-label">Acceso privado</div>
+    <h1>Portal Investigadores</h1>
+    <p>Ingresa con tu usuario y contraseña para acceder a las herramientas de la Red.</p>
+  </div>
+
+  <section class="portal-zona">
+    <iframe class="portal-embed"
+      src="https://script.google.com/macros/s/AKfycbxQtNgH4JWtMi32vrLcbdPdqXR4PnA84ddxI5z-IEh9FfL_gFwh-c3XZUyu6cSi_IdIIw/exec"
+      title="Portal Investigadores"></iframe>
+
+    <p class="portal-fallback">
+      ¿No ves el formulario?
+      <a href="https://script.google.com/macros/s/AKfycbxQtNgH4JWtMi32vrLcbdPdqXR4PnA84ddxI5z-IEh9FfL_gFwh-c3XZUyu6cSi_IdIIw/exec"
+         target="_blank" rel="noopener">Ábrelo en una pestaña nueva →</a>
+    </p>
+  </section>
+
+</div>
 
 <div id="site-footer"></div>
 
