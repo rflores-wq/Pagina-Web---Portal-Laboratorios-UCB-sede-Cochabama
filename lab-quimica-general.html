@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Química General · Red de Laboratorios UCB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="laboratorios.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- HERO · cambia la foto de fondo (lab-quimica-general.jpg) por una real del laboratorio -->
+<header class="lab-hero" style="background:
+    linear-gradient(135deg, rgba(13,27,62,.86), rgba(27,49,104,.72)),
+    center/cover no-repeat url('lab-quimica-general.jpg');">
+  <div class="lab-hero-inner">
+    <span class="lab-tag">Docencia</span>
+    <h1>¿Cómo formamos las <em>bases químicas</em> de los futuros ingenieros?</h1>
+    <p class="lab-sub">Laboratorio de Química General — prácticas fundamentales de química.</p>
+  </div>
+</header>
+
+<section class="lab-intro">
+  <p style="background:#fdf2dc;color:#9a6b00;padding:10px 14px;border-radius:8px;font-size:.85rem;max-width:none;">
+    ✏️ <strong>Página lista para rellenar.</strong> Reemplaza los textos de ejemplo por la información real de este laboratorio.
+  </p>
+  <div class="section-label" style="margin-top:24px;">El laboratorio</div>
+  <p>Escribe aquí una descripción del laboratorio de Química General: qué hace, a quién da servicio
+     y qué lo hace especial. (Reemplaza este párrafo.)</p>
+
+  <div class="lab-datos">
+    <div class="lab-dato"><div class="n">—</div><div class="t">Equipos principales</div></div>
+    <div class="lab-dato"><div class="n">—</div><div class="t">Tipos de ensayo</div></div>
+    <div class="lab-dato"><div class="n">—</div><div class="t">Proyectos activos</div></div>
+  </div>
+</section>
+
+<section class="lab-sec">
+  <h2>Proyectos</h2>
+  <p class="sub">En qué estamos trabajando ahora mismo.</p>
+  <div class="proy-grid">
+    <article class="proy-card">
+      <span class="estado activo">Activo</span>
+      <h3>Nombre del proyecto (ejemplo)</h3>
+      <p>Una frase que explique el impacto real del proyecto. Reemplázala por un proyecto real.</p>
+    </article>
+    <article class="proy-card">
+      <span class="estado plan">En planificación</span>
+      <h3>Otro proyecto (ejemplo)</h3>
+      <p>Duplica o borra estas tarjetas según los proyectos que tengas.</p>
+    </article>
+  </div>
+</section>
+
+<section class="lab-sec">
+  <h2>Equipamiento</h2>
+  <p class="sub">Toca un equipo para ver sus detalles.</p>
+  <div class="equipo-grid">
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Equipo 1" data-marca="Marca · Modelo"
+         data-desc="Para qué sirve este equipo. Reemplaza por un equipo real del laboratorio.">
+      <div class="ic">⚗️</div><div class="nom">Equipo 1</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Equipo 2" data-marca="Marca · Modelo"
+         data-desc="Descripción del equipo. Reemplaza este texto.">
+      <div class="ic">⚗️</div><div class="nom">Equipo 2</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Equipo 3" data-marca="Marca · Modelo"
+         data-desc="Descripción del equipo. Reemplaza este texto.">
+      <div class="ic">⚗️</div><div class="nom">Equipo 3</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>¿Necesitas usar este laboratorio?</h2>
+  <p>Reserva un equipo para tu práctica o solicita un servicio para tu proyecto.</p>
+  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="reservas.html" class="btn-primary">Reservar equipo</a>
+    <a href="index.html#contacto" class="btn-outline" style="border-color:rgba(255,255,255,.6);">Solicitar un servicio</a>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<div class="modal" id="modal-equipo">
+  <div class="modal-box">
+    <button class="modal-cerrar" onclick="cerrarEquipo()">×</button>
+    <div class="modal-img"></div>
+    <div class="modal-cuerpo"><h3></h3><div class="marca"></div><p></p></div>
+  </div>
+</div>
+
+<script src="layout.js"></script>
+<script src="script.js"></script>
+<script src="laboratorios-detalle.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Química Analítica · Red de Laboratorios UCB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="laboratorios.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- ════════ HERO CON PREGUNTA ════════
+     👉 Cambia la imagen de fondo por una foto REAL del laboratorio.
+        Reemplaza  lab-quimica.jpg  por el nombre de tu foto. -->
+<header class="lab-hero" style="background:
+    linear-gradient(135deg, rgba(13,27,62,.86), rgba(27,49,104,.72)),
+    center/cover no-repeat url('lab-quimica.jpg');">
+  <div class="lab-hero-inner">
+    <span class="lab-tag">Análisis · Ciencias</span>
+    <h1>¿Cómo garantizamos la <em>calidad y seguridad</em> de lo que consumimos?</h1>
+    <p class="lab-sub">Laboratorio de Química Analítica — análisis instrumental,
+       control de calidad y validación de métodos para la industria y la investigación.</p>
+  </div>
+</header>
+
+<!-- ════════ INTRO + DATOS RÁPIDOS ════════ -->
+<section class="lab-intro">
+  <div class="section-label">El laboratorio</div>
+  <p>Nuestro laboratorio de Química Analítica combina técnicas cromatográficas y
+     espectroscópicas de última generación para caracterizar muestras con precisión.
+     Damos servicio a proyectos de investigación, tesistas e industria del rubro
+     alimentario, ambiental y farmacéutico.</p>
+
+  <div class="lab-datos">
+    <div class="lab-dato"><div class="n">8</div><div class="t">Equipos principales</div></div>
+    <div class="lab-dato"><div class="n">15+</div><div class="t">Tipos de ensayo</div></div>
+    <div class="lab-dato"><div class="n">3</div><div class="t">Proyectos activos</div></div>
+  </div>
+</section>
+
+<!-- ════════ PROYECTOS CON ESTADO ════════ -->
+<section class="lab-sec">
+  <h2>Proyectos</h2>
+  <p class="sub">En qué estamos trabajando ahora mismo.</p>
+  <div class="proy-grid">
+
+    <article class="proy-card">
+      <span class="estado activo">Activo</span>
+      <h3>Pigmentos naturales en alimentos locales</h3>
+      <p>Identificación y cuantificación de colorantes naturales por HPLC en productos
+         andinos, para reemplazar aditivos sintéticos.</p>
+    </article>
+
+    <article class="proy-card">
+      <span class="estado plan">En planificación</span>
+      <h3>Validación de métodos para agua potable</h3>
+      <p>Estandarización de ensayos de metales y nitratos según norma boliviana,
+         para servicios de análisis a municipios.</p>
+    </article>
+
+    <article class="proy-card">
+      <span class="estado done">Completado</span>
+      <h3>Control de calidad de miel del valle</h3>
+      <p>Caracterización fisicoquímica de mieles regionales; resultados publicados
+         y transferidos a productores.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ════════ EQUIPAMIENTO (abre modal) ════════ -->
+<section class="lab-sec">
+  <h2>Equipamiento</h2>
+  <p class="sub">Toca un equipo para ver sus detalles.</p>
+  <div class="equipo-grid">
+
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Cromatógrafo HPLC" data-marca="Agilent · Serie 1260"
+         data-desc="Cromatografía líquida de alta resolución para separar y cuantificar compuestos: pigmentos, azúcares, vitaminas y contaminantes.">
+      <div class="ic">🧪</div><div class="nom">Cromatógrafo HPLC</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Espectrofotómetro UV-Vis" data-marca="Thermo · Genesys 150"
+         data-desc="Mide absorbancia de luz para determinar concentraciones de sustancias en solución. Base de muchos ensayos de rutina.">
+      <div class="ic">🌈</div><div class="nom">Espectrofotómetro UV-Vis</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Balanza analítica" data-marca="Sartorius · 0,1 mg"
+         data-desc="Pesaje de altísima precisión (hasta 0,0001 g) para preparar estándares y reactivos.">
+      <div class="ic">⚖️</div><div class="nom">Balanza analítica</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+
+    <div class="equipo-card" onclick="abrirEquipo(this)"
+         data-nombre="Digestor Kjeldahl" data-marca="Velp · UDK"
+         data-desc="Determinación de nitrógeno y proteína en alimentos por el método Kjeldahl.">
+      <div class="ic">🔥</div><div class="nom">Digestor Kjeldahl</div>
+      <span class="ver">Ver detalles →</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ LLAMADAS A LA ACCIÓN ════════ -->
+<div class="cta-strip">
+  <h2>¿Necesitas usar este laboratorio?</h2>
+  <p>Reserva un equipo para tu práctica o solicita un servicio de análisis para tu proyecto.</p>
+  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="reservas.html" class="btn-primary">Reservar equipo</a>
+    <a href="index.html#contacto" class="btn-outline" style="border-color:rgba(255,255,255,.6);">Solicitar un servicio</a>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<!-- ════════ MODAL DE EQUIPO (una sola vez, lo llena el JS) ════════ -->
+<div class="modal" id="modal-equipo">
+  <div class="modal-box">
+    <button class="modal-cerrar" onclick="cerrarEquipo()">×</button>
+    <div class="modal-img"></div>
+    <div class="modal-cuerpo">
+      <h3></h3>
+      <div class="marca"></div>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<script src="layout.js"></script>
+<script src="script.js"></script>
+<script src="laboratorios-detalle.js"></script>
+</body>
+</html>
