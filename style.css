@@ -517,15 +517,12 @@ footer {
 }
 
 /* ── ANIMATIONS ───────────────────────────────────── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .7s ease, transform .7s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
-}
+/* El contenido se ve POR DEFECTO. La animación solo se aplica si el JS
+   está activo (clase .js). Así, si script.js no carga, la página NUNCA
+   queda en blanco: se ve todo, solo sin la animación. */
+.fade-in { transition: opacity .7s ease, transform .7s ease; }
+.js .fade-in { opacity: 0; transform: translateY(28px); }
+.js .fade-in.visible { opacity: 1; transform: none; }
 
 /* ── RESPONSIVE ───────────────────────────────────── */
 @media (max-width: 900px) {
@@ -549,3 +546,6 @@ nav.open .nav-links {
   padding: 24px 5%;
   gap: 20px;
 }
+
+/* La tarjeta de laboratorio ahora es un enlace a su página */
+a.lab-card { text-decoration: none; color: inherit; display: block; }
